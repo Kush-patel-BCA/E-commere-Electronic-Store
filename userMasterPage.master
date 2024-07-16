@@ -1,0 +1,153 @@
+﻿<%@ Master Language="VB" CodeFile="userMasterPage.master.vb" Inherits="userMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="App_Themes/Theme1/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="Stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" rel="Stylesheet" type="text/css" />
+
+   
+   
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <center>
+        <form id="form1" runat="server">
+            <table border="0" width="100%" cellpadding="3" cellspacing="0" class="mytable">
+         <tr>
+        <td align="center">
+        <div class="logo">
+                   
+           <img src="Images/Tech_hub_logo.png"  alt="logo" height="150px" width="150px" />
+           
+        </div>
+      
+        <div class="banner">
+        <br />  
+        <br />
+           <h1>Tech Hub Electronic</h1>
+           
+         <br />
+         <br />
+        </div>
+       
+           
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+            <td class="menu">
+            <asp:Menu ID="Menu1" runat="server" BackColor="Black" 
+            ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="10px" 
+            Width="100%" Height="46px" DynamicHorizontalOffset="2" Font-Names="Verdana" >
+            <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="#F7F6F3" />
+            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/userHome.aspx" Text="Home" Value="Home">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Shop" Value="Shop" NavigateUrl="~/displayItem.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/order.aspx" Text="Cart" Value="Cart">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Change password.aspx" Text="Change Password" 
+                        Value="Change Password"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Edit Profile.aspx" Text="Edit Profile" 
+                        Value="Edit Profile"></asp:MenuItem>
+                    <asp:MenuItem Text="Order" Value="Order" NavigateUrl="~/pastUOrder.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/orderStatus.aspx" Text="Order Status" 
+                        Value="Order Status"></asp:MenuItem>
+                </Items>
+            <StaticHoverStyle ForeColor="White" BackColor="Blue" />
+            <StaticMenuItemStyle ItemSpacing="5px" VerticalPadding="2px" 
+             HorizontalPadding="5px" />
+            <StaticSelectedStyle BackColor="#5D7B9D" />
+            </asp:Menu>
+            </td>
+            <td align="center" bgcolor="Black">
+            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" 
+             CssClass="btnlogout" Height="40px" 
+             Width="100px" >Logout</asp:LinkButton>
+           </td>
+         </tr>
+     </table>
+  </td>
+</tr>
+
+         <tr>
+        
+            <td>
+            
+                <div>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+          
+        </td>
+
+    </tr>
+    <tr style="height:80px"  align="center">
+        <td>
+          <footer class="footer">
+  	                <div class="container">
+  	 	                <div class="row">
+                           <div class="footer-col">
+                                <div class="footer-text">
+                                    <h4>Tech Hub Electronic</h4>
+                                        <p> Welcome to Tech Hub Electronic, Explore our wide range of products including smartphones, laptops, cameras, and more.where website shopping for the latest gadgets, we've got you covered.</p>
+                                 </div>
+                             </div>
+  	 		            <div class="footer-col">
+  	 			            <h4>Information</h4>
+  	 			                <ul>
+  	 				                <li><a href="displayItem.aspx">Home</a></li>
+  	 				                <li><a href="About US.aspx">About US</a></li>
+  	 				                <li><a href="Contact US.aspx">Contact US</a></li>
+  	 				                <li><a href="Support US.aspx">Support US</a></li>
+  	 			                </ul>
+  	 		            </div>
+  	 		            <div class="footer-col">
+  	 			            <h4>Account</h4>
+  	 			                <ul>
+  	 				                <li><a href="login.aspx">Login</a></li>
+  	 				                <li><a href="Signup.aspx">Sign up</a></li>
+  	 				                <li><a href="Edit Profile.aspx">Edit Profile</a></li>
+  	 				                <li><a href="ForgotPassword.aspx">Forgot Password</a></li>
+  	 				                <li><a href="Change password.aspx">Change Password</a></li>
+  	 			                </ul>
+  	 		            </div>
+
+  	 	
+  	 		            <div class="footer-col">
+  	 			            <h4>follow us</h4>
+  	 			                <div class="social-links">
+                                    <a href="https://www.instagram.com/kush__patel__0035/"><i class="fab fa-instagram"></i></a>
+  	 				                <a href="https://www.facebook.com/profile.php?id=100044307520681&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+  	 				                <a href="https://twitter.com/kush__patel0001"><i class="fab fa-twitter"></i></a>
+  	 				                <a href="https://www.linkedin.com/in/kush-patel-133333283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+  	 			
+  	 			        </div>
+  	 		        </div>
+                           
+                    <div class="line">
+                        <p> © 2024 Tech Hub E-commerce Electronic. Designed and Developed by Kush Patel</p>
+                    </div>
+
+  	 	        </div>
+  	        </div>
+        </footer>
+        </td>
+    </tr>
+  </table>
+</form>
+  </center>   
+    
+</body>
+</html>

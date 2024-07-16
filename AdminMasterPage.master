@@ -1,0 +1,119 @@
+﻿<%@ Master Language="VB" CodeFile="AdminMasterPage.master.vb" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="App_Themes/Theme1/StyleSheet.css" />
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="Stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" rel="Stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    </head>
+<body>
+    <center>
+    
+    <form id="form1" runat="server">
+        <table border="0" width="100%" cellpadding="0" cellspacing="0" class="mytable">
+
+      <tr>
+        <td align="center">
+        <div class="logo">
+           <img src="Images/Tech_hub_logo.png"  alt="logo" height="150px" width="150px" />
+         </div>
+        <div class="banner">
+        <br />  
+        <br />
+           <h1>Tech Hub Electronic</h1>
+           
+         <br />
+         <br />
+        </div>
+       
+           
+        </td>
+    </tr>
+        <tr>
+        <td>
+            <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td class="menu">
+             <asp:Menu ID="Menu1" runat="server" BackColor="Black" 
+                ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="16px" 
+                Width="100%" Height="46px">
+                 <DynamicHoverStyle BackColor="Blue" ForeColor="White" />
+                 <DynamicMenuStyle BackColor="Black" />
+                <Items>
+                    <asp:MenuItem Text="Add Item" Value="Add Item" NavigateUrl="~/itemMaster.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Add Image" Value="Upload Item Image" 
+                        NavigateUrl="~/uploadItemImage.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Order" Value="Order">
+                        <asp:MenuItem Text="Confirm Orders" Value="Confirm Order" 
+                            NavigateUrl="~/confirmOrder.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Dispatch orders" Value="Dispatch orders" 
+                            NavigateUrl="~/dispatchOrder.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Delivery Orders" Value="Delivery Orders" 
+                            NavigateUrl="~/diliveredOrder.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Inventory" Value="Inventory">
+                        <asp:MenuItem Text="Stock report" Value="Stock report" 
+                            NavigateUrl="~/stockReport.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Update Stock" Value="Update Stock" 
+                            NavigateUrl="~/UpdateStock.aspx"></asp:MenuItem>
+
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Reports" Value="Reports">
+                        <asp:MenuItem Text="User Reports" Value="User Reports" 
+                            NavigateUrl="~/UserReport.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Feedback Report" Value="Feedback Report" 
+                            NavigateUrl="~/FeedbackReport.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+                 <StaticHoverStyle BackColor="Blue" ForeColor="White" />
+                 <StaticMenuItemStyle ItemSpacing="5px" />
+            </asp:Menu>
+            </td>
+                <td align="center" class="style3" bgcolor="Black">
+                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" 
+                                    CssClass="btnlogout" Height="40px" 
+                                    Width="100px" >Logout</asp:LinkButton>
+                            </td>
+       </tr>
+       </table>
+       </td>
+       </tr>
+     <tr>
+     
+        <td>
+            
+                <div>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+          
+        </td>
+
+    </tr>
+         <tr style="height:80px" align="center">
+        <td colspan="2">
+             <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+        
+            <div class="line">
+                        <p> © 2024 Tech Hub E-commerce Electronic. Designed and Developed by Kush Patel</p>
+            </div>
+  	 	</div>
+  	 </div>
+  </footer>
+        </td>
+    </tr>
+   </table>
+    </form>
+</center>
+</body>
+</html>
